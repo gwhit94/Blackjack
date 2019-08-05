@@ -7,7 +7,7 @@ document.querySelector("#submitButton").addEventListener("click", function(){
 function start(){
     console.log("START");
     username = document.querySelector("#username").value;
-    console.log(username);
+    document.querySelector("#playerName").innerText += username;
     document.querySelector(".landing").classList.add("d-none");
     document.querySelector(".gametable").classList.remove("d-none");
 }
@@ -62,13 +62,13 @@ console.log(deck1.deck);
 deck1.shuffle();
 console.log(deck1.deck);
 
-let userHand = [];
+let playerHand = [];
 let computerHand = [];
 document.querySelector("#dealbutton").addEventListener("click", function(){
     
-    userHand.push(deck1.deal());
-    userHand.push(deck1.deal());
-    console.log(userHand);
+    playerHand.push(deck1.deal());
+    playerHand.push(deck1.deal());
+    console.log(playerHand);
     computerHand.push(deck1.deal());
     computerHand.push(deck1.deal());
     console.log(computerHand);

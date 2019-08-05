@@ -26,6 +26,13 @@
             background-color: grey;
             height: 25%;
         }
+        .bgText {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            line-height: 100%;
+            text-align: center;
+        }
 
         @media only screen and (min-width: 768px) {
             .gametable {
@@ -85,13 +92,13 @@
 <div class="container gametable d-none">
     <div class="col playspace">
         <div class="compSide row">
-            Comp Hand
+            <div class="bgText">Computer</div>
         </div>
         <div class="tableCenter row">
             <button id="dealbutton" type="button" class="col btn btn-dark align-self-center">Deal</button>
         </div>
         <div class="playerSide row">
-            Player Hand
+            <div id="playerName" class="bgText">Player: </div>
         </div>
     </div>
     
